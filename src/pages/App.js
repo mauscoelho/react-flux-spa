@@ -9,13 +9,11 @@ export default class App extends Component {
       title: 'Welcome :)'
     }
   }
-
   render() {
     const {location} = this.props;
     const containerStyle = {
       marginTop: "60px"
     };
-
     return (
       <div>
         <Nav location={location} />
