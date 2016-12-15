@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Todo from '../components/Todo';
+import * as TodoActions from '../actions/TodoActions';
 import TodoStore from '../stores/TodoStore';
 
 export default class Todos extends Component {
@@ -18,6 +19,10 @@ export default class Todos extends Component {
     });
     
   }
+
+  createTodo(){
+    TodoActions.createTodo(Date.now());
+  }
   
   render() {
     const {todos} = this.state;
@@ -27,6 +32,7 @@ export default class Todos extends Component {
 
     return (
       <div>
+        <button onClick={this.createTodo.bind(this)}>Create</button>
         <h4>Todos</h4>
         <ul>{TodoComponents}</ul>
       </div>
