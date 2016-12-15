@@ -33,7 +33,7 @@ export default class Nav extends Component {
                     <div className={'navbar-collapse ' + navClass} id="bs-example-navbar-collapse-1">
                         <ul className="nav navbar-nav">
                             <li className={featuredClass}>
-                                <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Featured</IndexLink>
+                                <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Todos</IndexLink>
                             </li>
                             <li className={archivesClass}>
                                 <Link to="archives" onClick={this.toggleCollapse.bind(this)}>Archives</Link>
